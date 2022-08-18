@@ -16,7 +16,7 @@
  */
 
 // package com.nativemidiapp;
-package com.example.nativemidi;
+package com.midisuite;
 
 class MidiDataHelper {
     /**

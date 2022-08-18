@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.nativemidi; // Namespace and program package - see folder name
+package com.midisuite; // Namespace and program package - see folder name
 
 import android.app.Activity;
 import android.content.Context;

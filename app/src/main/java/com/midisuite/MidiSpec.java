@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.nativemidi;
+package com.midisuite;
 
 public class MidiSpec {
     // Message Codes

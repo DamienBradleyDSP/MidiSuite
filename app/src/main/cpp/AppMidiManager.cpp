@@ -160,7 +160,7 @@ void midiEngineCallback(SLAndroidSimpleBufferQueueItf bq, void *context) {
 //
 extern "C" {
 
-void Java_com_example_nativemidi_AppMidiManager_startWritingMidi(
+void Java_com_midisuite_AppMidiManager_startWritingMidi(
         JNIEnv *env, jobject, jobject midiDeviceObj, jint portNumber) {
 
     media_status_t status;
@@ -174,14 +174,14 @@ void Java_com_example_nativemidi_AppMidiManager_startWritingMidi(
     sMidiInputPort = inputPort;
 }
 
-void Java_com_example_nativemidi_AppMidiManager_stopWritingMidi(JNIEnv *, jobject) {
+void Java_com_midisuite_AppMidiManager_stopWritingMidi(JNIEnv *, jobject) {
     /*media_status_t status =*/ AMidiDevice_release(sNativeSendDevice);
     sNativeSendDevice = NULL;
 }
 
 
 JNIEXPORT void JNICALL
-Java_com_example_nativemidi_AppMidiManager_createEngine(JNIEnv *, jclass) {
+Java_com_midisuite_AppMidiManager_createEngine(JNIEnv *, jclass) {
     SLresult result;
 
     // create engine
@@ -222,7 +222,7 @@ Java_com_example_nativemidi_AppMidiManager_createEngine(JNIEnv *, jclass) {
 }
 
 JNIEXPORT void JNICALL
-Java_com_example_nativemidi_AppMidiManager_createBufferQueueAudioPlayer(JNIEnv, jclass,
+Java_com_midisuite_AppMidiManager_createBufferQueueAudioPlayer(JNIEnv, jclass,
                                                                         jint sampleRate,
                                                                         jint bufSize) {
     SLresult result;
@@ -311,7 +311,7 @@ Java_com_example_nativemidi_AppMidiManager_createBufferQueueAudioPlayer(JNIEnv, 
 }
 
 JNIEXPORT void JNICALL
-Java_com_example_nativemidi_AppMidiManager_shutdown(JNIEnv *, jclass) {
+Java_com_midisuite_AppMidiManager_shutdown(JNIEnv *, jclass) {
 // destroy buffer queue audio player object, and invalidate all associated interfaces
     if (bqPlayerObject != NULL) {
         (*bqPlayerObject)->Destroy(bqPlayerObject);

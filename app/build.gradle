@@ -5,7 +5,7 @@ android {
     ndkVersion '22.1.7171670'
 
     defaultConfig {
-        applicationId "com.example.nativemidi"
+        applicationId 'com.digiskin'
         minSdkVersion 29
         targetSdkVersion 29
         versionCode 1

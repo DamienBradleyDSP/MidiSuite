@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.nativemidi;
+package com.midisuite;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -37,7 +37,7 @@ public class AppMidiManager {
     }
 
     public static void loadNativeAPI() {
-        System.loadLibrary("native_midi");
+        System.loadLibrary("midisuite");
     }
 
     public static native void createEngine();
